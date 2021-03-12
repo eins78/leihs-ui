@@ -67,7 +67,7 @@ module.exports = [
     ...baseConfig,
     entry: {
       main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
-      'leihs-ui-client-side-external-react': './src/client-side.js',
+      'leihs-ui-client-side-external-react': './src/client-side.js'
     },
     ...externalsConfig
   },
@@ -81,8 +81,22 @@ module.exports = [
       path: path.resolve(__dirname, 'dist'),
       filename: 'ui-components/index.js',
       // library: "LeihsUI",
-      libraryExport: "default",
-      libraryTarget: 'umd',
+      libraryExport: 'default',
+      libraryTarget: 'umd'
+    }),
+    ...externalsConfig
+  },
+  // FIXME: just the UI components lib, but for admin: includes `jimp`. This is a workaround and should be removed, or it should be included in the normal bundle when code splitting is set up <https://webpack.js.org/guides/code-splitting/>
+  {
+    ...baseConfig,
+    entry: {
+      main: './src/components-bundle-admin.js'
+    },
+    output: Object.assign({}, baseConfig.output, {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'ui-components-admin/index.js',
+      libraryExport: 'default',
+      libraryTarget: 'umd'
     }),
     ...externalsConfig
   }
