@@ -1,0 +1,12 @@
+.tmp-page-layout, body {
+  background-color: white;
+}
+
+.tmp-navbar {
+  background-color: rgb(236, 236,	236);
+}
+
+.tmp-filter-summary {
+  background-color: rgb(236, 236,	236);
+  border-radius: 1rem;
+}
