@@ -33,6 +33,20 @@ module.exports = {
         ]
       },
 
+      // plain css
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+
+      // fonts
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: 'url-loader'
+        }
+      },
+
       // images
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],

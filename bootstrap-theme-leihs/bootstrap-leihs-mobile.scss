@@ -5,6 +5,8 @@
 @import './mobile/variables';
 @import './bootstrap-leihs-base';
 
+@import './mobile/fonts';
+
 // wireframe tmp styles:
 @import './mobile/tmp-styles';
 
@@ -93,7 +95,7 @@
 }
 
 /* WIP dark mode */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     background-color: #dfdfdf;
     color: #444;
@@ -120,17 +122,17 @@
   .text-color-danger {
     color: aquamarine;
   }
-} */
+}
 
 /* while prototyping, constrain width */
-/* html {
-  background: rgba(0, 0, 0, 0.67);
-}
-body {
-  background: transparent;
-}
-#app {
-  max-width: 40rem;
-  background: white;
-  min-height: 100%;
-} */
+// html {
+//   background: rgba(0, 0, 0, 0.67);
+// }
+// body {
+//   background: transparent;
+// }
+// #app {
+//   max-width: 40rem;
+//   background: white;
+//   min-height: 100%;
+// }
