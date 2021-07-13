@@ -12,6 +12,7 @@ cd -
 
 # NOTE: optimize network access, first try with local cache only
 npm ci --no-audit --offline || npm ci --no-audit
-cd -
 
-# vi: ft=sh
+# WTF?
+cd bootstrap-theme-leihs
+npm run ensure-sass
